@@ -3,6 +3,7 @@ Universal Domain Adaptation for cross-survey classification, regression and anom
 
 <div align="center">
 <img align="center" width="600" src="images/DA_horizontal.png">
+  
 <sub>Types of DA problems. Source domain is represented with solid line ellipse, while target domain uses dashed lines. Classes in the source domain are represented with filed shapes and target domain classes by empty shapes. In our work we focus on Open DA problems, but the code we develop is capable of handling all four types of DA problems.</sub>
 </div>
 
