@@ -17,8 +17,8 @@ Our experiments were performed using a ResNet50 architecture, trained with early
 We use two GalaxyZoo datasets: SDSS (source domain) and DECaLS (target domain). The images used can be found at [Zenodo](https://....). We apply our method to a3-class and 10-class galaxy morphology classification problem. Furthermore, our unlabeled targed domain contains one uknown anomally class (strong gravitational lenses), that the model needs to also classify i.e. detect, cluster and separate from other known classes.
 
 
-![](images/UDA1.png width="100")
-<img align="center" width="600" src="images/UDA1.png">
+<div align="center">
+<img align="center" width="300" src="images/UDA1.png">
 
 <sub>DeepAstroUDA method and the effects of different loss functions in an OpenDA problem. Cross-entropy loss (filled red arrows) clusters the labeled source domain data (filled circles and squares). Adaptive clustering loss (empty red arrows) pushes unlabeled target domain data (empty circles and squares), towards data it shares most similar features with (both source and target data, which are stored in the bank). Finally entropy loss (empty violet arrows) uses entropy to push away unknown classes further away from the known ones. In this \textit{Open DA} example the unknown class is present in the target domain (empty squares.)</sub>
 </div>
