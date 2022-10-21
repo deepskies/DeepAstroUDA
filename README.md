@@ -1,7 +1,7 @@
-<p style='text-align: justify;'>
-
 # DeepAstroUDA
-Universal Domain Adaptation (DA) for cross-survey classification, regression and anomaly detection. Code can be applied to any kind of domain adaptation problems i.e. closed, open, partial or open-partial. 
+<p style='text-align: justify;'>
+  Universal Domain Adaptation (DA) for cross-survey classification, regression and anomaly detection. Code can be applied to any kind of domain adaptation problems i.e. closed, open, partial or open-partial. 
+</p>
 
 <div align="center">
 <img align="center" width="800" src="images/DA_horizontal.png">
@@ -49,5 +49,3 @@ pip install -r requirements.txt
 
 ### References
 If you use this code, please cite our paper: [arXiv:....](.....)
-
-  </p>
