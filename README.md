@@ -19,9 +19,12 @@ We use two GalaxyZoo datasets: SDSS (source domain) and DECaLS (target domain). 
 
 <div align="center">
 <img align="left" width="300" src="images/UDA1.png">
-<br><br>
+<br>
+<br>
+<br>
 <sub>DeepAstroUDA method and the effects of different loss functions in an OpenDA problem. Cross-entropy loss (filled red arrows) clusters the labeled source domain data (filled circles and squares). Adaptive clustering loss (empty red arrows) pushes unlabeled target domain data (empty circles and squares), towards data it shares most similar features with (both source and target data, which are stored in the bank). Finally entropy loss (empty violet arrows) uses entropy to push away unknown classes further away from the known ones. In this \textit{Open DA} example the unknown class is present in the target domain (empty squares.)</sub>
 </div>
+<br>
 <br>
 <br>
 <br>
