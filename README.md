@@ -41,6 +41,75 @@ This code was developed using Pytorch .... The requirements.txt file lists all P
 pip install -r requirements.txt
 ```
 
+## Introduction to DeepDance
+
+DeepDance contains an updated implementation of the DANCE algorithm used for universal domain adaptation. The original code base and project paper can be found [here](https://github.com/VisionLearningGroup/DANCE "Universal Domain Adaptation through Self-Supervision"). Jump [here](#deep) for the list of available commands.
+
+### Pieces of the Package
+
+#### Input
+
+DeepDance includes access to the template files and sample datasets needed to run the system with varying amounts of input.
+
+The available sample datasets (and their original use cases for this project) used are as follows:
+
+| Dataset | Experimental Use |
+|:---|:---|
+| Office | fast bench-marking and initial hyperparameter testing |
+| Astro-NN | subsection of GalaxyZoo2 data, testing performance on many-class astronomical datasets |
+| GalaxyZoo2 | experiments on accuracy at different measures of openness|
+| DeepAdversaries | experiments on limited classes, more difficult datasets|
+
+Along with the datasets above, an available configuration file template is available for new datasets. If a configuration file is not included at run-time, a configuration file of the same format will be output at the end of training.
+
+#### Output
+
+The following are the metric documents output by the system:
+
+- Loss CSV and plot
+- Accuracy CSV and plots (total, closed, and per class accuracy)
+- t-SNE plot and t-SNE visualization-tool file
+
+## Using DeepDance
+
+Below are the list of commands, along with some possible approaches to using DeepDance.
+
+### DeepDance Available Commands and Optionals <a name="deep"></a>
+
+| Command | Function |
+|:---|:---|
+| deep_dance -h | Displays a help prompt that gives a comprehensive overview of possible commands. |
+| deep_dance demo | Automatically runs the DANCE pipeline on the Astro-NN dataset. | 
+| deep_dance demo -h | Displays a help prompt that gives a cromprehensive overview of possible arguments and optionals. |
+| deep_dance demo --dataset={'office', 'astro-nn', 'gz2', 'deep-adv', 'data'} | Runs a chosen example dataset with default training configuration. Use the **'data'** option if you're running deep_dance on your own dataset. |
+| deep_dance demo --config-path={path\to\referenced\file} | Not a required value. Uses the provided path to get training configuration information from yaml. If file path not provided, a default training configuration yaml is created at the DEFAULT_PATH="./files/config_env/{dataset_name}-{num_classes}-train-config_{domain_type}. |
+| deep_dance demo --unknowns-supplied={Boolean} | Not a required value. Informs program whether to use auto-clustering or conform to number of clusters specified in config file. If the variable is not provided, then the training will default to supplied based on data directory structure. |
+| deep_dance demo --image-path-text={path\to\referenced\file} | Not a required value. Informs program whether an image directory to file path text file has been created. If optional is not supplied, a utility function will be called to create one. |
+| deep_dance demo --output-directory={path\to\referenced\directory} | Not a required value. Informs program whether a desired output directory exists for training and testing output. If optional is not supplied, an output directory structure will be created. |
+| deep_dance demo --data-type={'jpg', 'png', 'numpy'} | Not a required value. Informs program whether your personal dataset is in the form of jpeg, png, or .npy images/arrays. If optional is not supplied, program will (1) warn the user, and (2) infer the data type by peaking at the first data file available. |
+| deep_dance demo --domain-type={'open', 'open-partial', 'closed'} | BETA IMPLEMENT. Allows user to choose what type of domain adaptation is being used. If not supplied, **open** is the default (total closed accuracy is also produced).|
+
+
+
+
+### Possible Experimental Setups
+
+| Approach |
+|:---|
+| [Run a Simple Example ](#example) |
+| [Using Input Data + Default Training Configuration](#data-default) |
+| [Using Input Data + Input Training Configuration](#data-config) |
+
+
+Checking links in paper [DeepDance Available Commands](#deep)
+-- feature table with hyperlink to different approaches to using DeepDance
+
+### Approach 1: Run Examples <a name="example"></a>
+
+### Approach 2: Input Data + Default Training Configuration <a name="data-default"></a>
+
+### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a>
+
 ### Authors
 - Aleksandra Ćiprijanović
 - Ashia Lewis
