@@ -29,12 +29,6 @@ We use two GalaxyZoo datasets: SDSS (source domain) and DECaLS (target domain). 
 <br>
 <br>
 
-### Training
-Explanations of how to run different versions of training, evaluation as well as plotting are given in this example notebook: 
-```
-.......ipynb 
-```
-
 ### Requirements
 This code was developed using Pytorch .... The requirements.txt file lists all Python libraries that your notebooks will need, and they can be installed using:
 ```
