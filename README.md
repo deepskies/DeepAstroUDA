@@ -80,7 +80,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 
 
 
-<!### Possible Experimental Setups
+<!-- ### Possible Experimental Setups -->
 
 | Approach |
 |:---|
@@ -92,12 +92,12 @@ Below are the list of commands, along with some possible approaches to using Dee
 Checking links in paper [DeepAstroUDA Available Commands](#deep)
 -- feature table with hyperlink to different approaches to using DeepAstroUDA
 
-### Approach 1: Run Examples <a name="example"></a>
+<!-- ### Approach 1: Run Examples <a name="example"></a> -->
 
-### Approach 2: Input Data + Default Training Configuration <a name="data-default"></a>
+<!-- ### Approach 2: Input Data + Default Training Configuration <a name="data-default"></a> -->
 
-### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a>
->
+<!-- ### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a> -->
+
 
 ### Authors
 - Aleksandra Ćiprijanović
