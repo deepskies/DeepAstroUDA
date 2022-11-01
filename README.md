@@ -43,10 +43,10 @@ The available sample datasets (and their original use cases for this project) us
 
 | Dataset | Experimental Use |
 |:---|:---|
-| Office | fast bench-marking and initial hyperparameter testing |
-| Astro-NN | subsection of GalaxyZoo2 data, testing performance on many-class astronomical datasets |
-| GalaxyZoo2 | experiments on accuracy at different measures of openness|
-| DeepAdversaries | experiments on limited classes, more difficult datasets|
+| [Office](https://www.hemanthdv.org/officeHomeDataset.html) | fast bench-marking and initial hyperparameter testing |
+| [Astro-NN](https://astronn.readthedocs.io/en/latest/galaxy10.html) | subsection of GalaxyZoo2 data (DECaLS data with cleaner class distinctions and 10 galaxy morphology classes) |
+| [GalaxyZoo2](https://data.galaxyzoo.org) | GalazyZoo2 10-class data (SDSS wide field and Stripe 82 coadded-depth deep field)|
+| [DeepAdversaries](https://zenodo.org/record/5514180#.Y2FkZC-B2_w) | Simulated LSST mocks after 1 and 10 years of observing (3 classes: spiral, elliptical, merging galaxy)|
 
 Along with the datasets above, an available configuration file template is available for new datasets. If a configuration file is not included at run-time, a configuration file of the same format will be output at the end of training.
 
