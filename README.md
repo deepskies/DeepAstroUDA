@@ -1,5 +1,5 @@
 # DeepAstroUDA
-Universal Domain Adaptation (DA) for cross-survey classification, regression and anomaly detection. Code can be applied to any kind of domain adaptation problems i.e. closed, open, partial or open-partial. 
+We develop a Universal Domain Adaptation method DeepAstroUDA, capable of performing semi-supervised domain alignment that can be applied to datasets with different types of class overlap. Extra classes can be present in any of the two datasets, and the method can even be used in the presence of unknown classes. DeepAstroUDA can be used for classification, regression and anomaly detection. 
 
 <div align="center">
 <img align="center" width="700" src="images/DA_horizontal.png">
@@ -7,14 +7,15 @@ Universal Domain Adaptation (DA) for cross-survey classification, regression and
 <sub>Types of DA problems. Source domain is represented with solid line ellipse, while target domain uses dashed lines. Classes in the source domain are represented with filed shapes and target domain classes by empty shapes. In our work we focus on Open DA problems, but the code we develop is capable of handling all four types of DA problems.</sub>
 </div>
 
-### About
-In the era of big astronomical surveys, our ability to leverage artificial intelligence algorithms simultaneously for multiple datasets will open new avenues for scientific discovery. Unfortunately, simply training a deep neural network on images from one data domain often leads to very poor performance on any other dataset. Here we develop a Universal Domain Adaptation method DeepAstroUDA, capable of performing semi-supervised domain alignment that can be applied to datasets with different types of class overlap. Extra classes can be present in any of the two datasets, and the method can even be used in the presence of unknown classes. For the first time, we demonstrate the successful use of domain adaptation on two very different observational datasets (from SDSS and DECaLS). We show that our method is capable of bridging the gap between two astronomical surveys, and also performs well for anomaly detection and clustering of unknown data in the unlabeled dataset. We apply our model to two examples of galaxy morphology classification tasks with anomaly detection: 1) classifying spiral and elliptical galaxies with detection of merging galaxies (three classes including one unknown anomaly class); 2) a more granular problem where the classes describe more detailed morphological properties of galaxies, with the detection of gravitational lenses (ten classes including one unknown anomaly class).
+### Intro
+In the era of big astronomical surveys, our ability to leverage artificial intelligence algorithms simultaneously for multiple datasets will open new avenues for scientific discovery. Unfortunately, simply training a deep neural network on images from one data domain often leads to very poor performance on any other dataset.
+For the first time, we demonstrate the successful use of domain adaptation on two very different observational datasets (from SDSS and DECaLS). We show that our method is capable of bridging the gap between two astronomical surveys, and also performs well for anomaly detection and clustering of unknown data in the unlabeled dataset. We apply our model to two examples of galaxy morphology classification tasks with anomaly detection: 1) classifying spiral and elliptical galaxies with detection of merging galaxies (three classes including one unknown anomaly class); 2) a more granular problem where the classes describe more detailed morphological properties of galaxies, with the detection of gravitational lenses (ten classes including one unknown anomaly class).
 
 ### Architecture
 Our experiments were performed using a ResNet50 architecture, trained with early stopping that monitors the change in accuracy and stops the training when there is no improvement in 12 epochs. Domain-specific batch normalization is used to eliminates domain style information leakage. The model is trained using stochastic gradient descent with Nesterov momentum and an initial learning rate of 0.001. We train our models on 4 NVIDIA RTX A6000 GPUs (available from Google Colab and LambdaLabs), and on average the training converges in approximately 5 hours. 
 
 ### Datasets
-We use two GalaxyZoo datasets: SDSS (source domain) and DECaLS (target domain). The images used can be found at [Zenodo](https://....). We apply our method to a 3-class and 10-class galaxy morphology classification problem. Furthermore, our unlabeled targed domain contains one uknown anomally class (strong gravitational lenses), that the model needs to also classify i.e. detect, cluster and separate from other known classes.
+We use two GalaxyZoo datasets: SDSS (source domain) and DECaLS (target domain). We apply our method to a 3-class and 10-class galaxy morphology classification problem. Furthermore, our unlabeled targed domain contains one uknown anomally class (strong gravitational lenses), that the model needs to also classify i.e. detect, cluster and separate from other known classes.
 
 
 <div align="center">
@@ -34,10 +35,6 @@ This code was developed using Pytorch .... The requirements.txt file lists all P
 ```
 pip install -r requirements.txt
 ```
-
-## Introduction to DeepDance
-
-DeepDance contains an updated implementation of the DANCE algorithm used for universal domain adaptation. The original code base and project paper can be found [here](https://github.com/VisionLearningGroup/DANCE "Universal Domain Adaptation through Self-Supervision"). Jump [here](#deep) for the list of available commands.
 
 ### Pieces of the Package
 
