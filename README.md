@@ -80,7 +80,9 @@ Below are the list of commands, along with some possible approaches to using Dee
 
 
 
-<!-- ### Possible Experimental Setups -->
+### Possible Experimental Setups
+
+Examples code for running different types of experiments will be added soon!
 
 | Approach |
 |:---|
