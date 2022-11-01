@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 #### Input
 
-DeepDance includes access to the template files and sample datasets needed to run the system with varying amounts of input.
+DeepAstroUDA includes access to the template files and sample datasets needed to run the system with varying amounts of input.
 
 The available sample datasets (and their original use cases for this project) used are as follows:
 
@@ -58,11 +58,11 @@ The following are the metric documents output by the system:
 - Accuracy CSV and plots (total, closed, and per class accuracy)
 - t-SNE plot and t-SNE visualization-tool file
 
-## Using DeepDance
+## Using DeepAstroUDA
 
-Below are the list of commands, along with some possible approaches to using DeepDance.
+Below are the list of commands, along with some possible approaches to using DeepAstroUDA.
 
-### DeepDance Available Commands and Optionals <a name="deep"></a>
+### DeepAstroUDA Available Commands and Optionals <a name="deep"></a>
 
 | Command | Function |
 |:---|:---|
@@ -80,7 +80,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 
 
 
-### Possible Experimental Setups
+<!### Possible Experimental Setups
 
 | Approach |
 |:---|
@@ -89,14 +89,15 @@ Below are the list of commands, along with some possible approaches to using Dee
 | [Using Input Data + Input Training Configuration](#data-config) |
 
 
-Checking links in paper [DeepDance Available Commands](#deep)
--- feature table with hyperlink to different approaches to using DeepDance
+Checking links in paper [DeepAstroUDA Available Commands](#deep)
+-- feature table with hyperlink to different approaches to using DeepAstroUDA
 
 ### Approach 1: Run Examples <a name="example"></a>
 
 ### Approach 2: Input Data + Default Training Configuration <a name="data-default"></a>
 
 ### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a>
+>
 
 ### Authors
 - Aleksandra Ćiprijanović
