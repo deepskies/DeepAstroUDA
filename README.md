@@ -75,7 +75,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 | deep_dance demo --image-path-text={path\to\referenced\file} | Not a required value. Informs program whether an image directory to file path text file has been created. If optional is not supplied, a utility function will be called to create one. |
 | deep_dance demo --output-directory={path\to\referenced\directory} | Not a required value. Informs program whether a desired output directory exists for training and testing output. If optional is not supplied, an output directory structure will be created. |
 | deep_dance demo --data-type={'jpg', 'png', 'numpy'} | Not a required value. Informs program whether your personal dataset is in the form of jpeg, png, or .npy images/arrays. If optional is not supplied, program will (1) warn the user, and (2) infer the data type by peaking at the first data file available. |
-| deep_dance demo --domain-type={'open', 'open-partial', 'closed'} | BETA IMPLEMENT. Allows user to choose what type of domain adaptation is being used. If not supplied, **open** is the default. For comparison model trained without domain adaptation is also trained in parallel with any domain adaptation training.|
+| deep_dance demo --domain-type={'open', 'open-partial', 'closed'} | Allows user to choose what type of domain adaptation is being used ('open-partial' covers both partial and open-partial). If not supplied, **open** is the default. For comparison model trained without domain adaptation is also trained in parallel with any domain adaptation training.|
 
 
 
