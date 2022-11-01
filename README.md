@@ -82,17 +82,17 @@ Below are the list of commands, along with some possible approaches to using Dee
 
 ### Possible Experimental Setups
 
-Examples code for running different types of experiments will be added soon!
 
-| Approach |
+
+| Examples code for running different types of experiments will be added soon! |
 |:---|
 | [Run a Simple Example ](#example) |
 | [Using Input Data + Default Training Configuration](#data-default) |
 | [Using Input Data + Input Training Configuration](#data-config) |
 
 
-Checking links in paper [DeepAstroUDA Available Commands](#deep)
--- feature table with hyperlink to different approaches to using DeepAstroUDA
+<!-- Checking links in paper [DeepAstroUDA Available Commands](#deep)
+-- feature table with hyperlink to different approaches to using DeepAstroUDA -->
 
 <!-- ### Approach 1: Run Examples <a name="example"></a> -->
 
