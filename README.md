@@ -14,9 +14,6 @@ For the first time, we demonstrate the successful use of domain adaptation on tw
 ### Architecture
 Our experiments were performed using a ResNet50 architecture, trained with early stopping that monitors the change in accuracy and stops the training when there is no improvement in 12 epochs. Domain-specific batch normalization is used to eliminates domain style information leakage. The model is trained using stochastic gradient descent with Nesterov momentum and an initial learning rate of 0.001. We train our models on 4 NVIDIA RTX A6000 GPUs (available from Google Colab and LambdaLabs), and on average the training converges in approximately 5 hours. 
 
-### Datasets
-We use two GalaxyZoo datasets: SDSS (source domain) and DECaLS (target domain). We apply our method to a 3-class and 10-class galaxy morphology classification problem. Furthermore, our unlabeled targed domain contains one uknown anomally class (strong gravitational lenses), that the model needs to also classify i.e. detect, cluster and separate from other known classes.
-
 
 <div align="center">
 <img align="left" width="300" src="images/UDA1.png">
