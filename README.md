@@ -106,4 +106,4 @@ Below are the list of commands, along with some possible approaches to using Dee
 - Ashia Lewis
 
 ### References
-If you use this code, please cite our paper: [arXiv:....](.....)
+If you use this code, please cite our paper: [arXiv:2211.00677](https://arxiv.org/abs/2211.00677)
