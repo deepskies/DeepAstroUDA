@@ -78,29 +78,6 @@ Below are the list of commands, along with some possible approaches to using Dee
 | deep_dance demo --domain-type={'open', 'open-partial', 'closed'} | Allows user to choose what type of domain adaptation is being used ('open-partial' covers both partial and open-partial). If not supplied, **open** is the default. For comparison model trained without domain adaptation is also trained in parallel with any domain adaptation training.|
 
 
-
-
-### Possible Experimental Setups
-
-
-
-| Examples code for running different types of experiments will be added soon! |
-|:---|
-| [Run a Simple Example ](#example) |
-| [Using Input Data + Default Training Configuration](#data-default) |
-| [Using Input Data + Input Training Configuration](#data-config) |
-
-
-<!-- Checking links in paper [DeepAstroUDA Available Commands](#deep)
--- feature table with hyperlink to different approaches to using DeepAstroUDA -->
-
-<!-- ### Approach 1: Run Examples <a name="example"></a> -->
-
-<!-- ### Approach 2: Input Data + Default Training Configuration <a name="data-default"></a> -->
-
-<!-- ### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a> -->
-
-
 ### Authors
 - Aleksandra Ćiprijanović
 - Ashia Lewis
