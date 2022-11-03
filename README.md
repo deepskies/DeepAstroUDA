@@ -28,7 +28,7 @@ Our experiments were performed using a ResNet50 architecture, trained with early
 <br>
 
 ### Requirements
-This code was developed using Pytorch .... The poetry.lock file lists all Python libraries that your notebooks will need, and they can be installed using the following command:
+This code was developed using Pytorch. The poetry.lock file lists all Python libraries that your notebooks will need, and they can be installed using the following command:
 ```
 python3 -m poetry shell
 ```
