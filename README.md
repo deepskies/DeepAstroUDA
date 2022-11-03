@@ -30,7 +30,7 @@ Our experiments were performed using a ResNet50 architecture, trained with early
 ### Requirements
 This code was developed using Pytorch .... The requirements.txt file lists all Python libraries that your notebooks will need, and they can be installed using:
 ```
-pip install -r requirements.txt
+poetry shell
 ```
 
 ### Pieces of the Package
