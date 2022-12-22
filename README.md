@@ -37,7 +37,7 @@ python3 -m poetry shell
 
 #### Input
 
-DeepAstroUDA includes access to the template files and sample datasets needed to run the system with varying amounts of input.
+DeepAstroUDA includes access to the template files and sample datasets needed to run the system with varying amounts of input. Any sample datasets are automatically downloaded.
 
 The available sample datasets (and their original use cases for this project) used are as follows:
 
@@ -50,7 +50,7 @@ The available sample datasets (and their original use cases for this project) us
 
 Along with the datasets above, an available configuration file template is available for new datasets. If a configuration file is not included at run-time, a configuration file of the same format will be output at the end of training.
 
-#### Output
+#### Output<a name="output"></a>
 
 The following are the metric documents output by the system:
 
@@ -96,7 +96,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 
 ### Approach 1: Run Minimal Example <a name="example"></a>
 To begin a minimal example run of the DeepAstroUDA code, pip install the package using the following code:
-`pip install deepastrouda`.
+`pip install deepastrouda`. Any required data will be automatically downloaded by the package.
 
 Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
 
@@ -107,7 +107,7 @@ Users should then configure their desired output paths and project environment p
 }
 ```
 
-Lastly, begin the demo run using the command-line snippet below. All output from both training and testing will be dumped in the output folder.
+Lastly, begin the demo run using the command-line snippet below. All [output](#output) from both training and testing will be dumped in the output folder.
 
 ` deep_astro demo `
 
