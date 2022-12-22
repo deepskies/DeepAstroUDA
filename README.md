@@ -94,7 +94,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 <!-- Checking links in paper [DeepAstroUDA Available Commands](#deep)
 -- feature table with hyperlink to different approaches to using DeepAstroUDA -->
 
-<!-- ### Approach 1: Run Minimal Example <a name="example"></a> -->
+### Approach 1: Run Minimal Example <a name="example"></a>
 To begin a minimal example run of the DeepAstroUDA code, pip install the package using the following code:
 `pip install deepastrouda`.
 
