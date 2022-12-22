@@ -48,7 +48,7 @@ The available sample datasets (and their original use cases for this project) us
 | [GalaxyZoo2](https://data.galaxyzoo.org) | GalazyZoo2 10-class data (SDSS wide field and Stripe 82 coadded-depth deep field)|
 | [DeepAdversaries](https://zenodo.org/record/5514180#.Y2FkZC-B2_w) | Simulated LSST mocks after 1 and 10 years of observing (3 classes: spiral, elliptical, merging galaxy)|
 
-Exact datasets (LSST mocks, SDSS wide and deep field and DeCALS) we use in our work can be found on [Zenodoo](https://doi.org/10.5281/zenodo.7473597).
+Exact datasets (LSST mocks, SDSS wide and deep field and DeCALS data) we use in our work can be found on [Zenodoo](https://doi.org/10.5281/zenodo.7473597).
 
 Along with the datasets above, an available configuration file template is available for new datasets. If a configuration file is not included at run-time, a configuration file of the same format will be output at the end of training.
 
