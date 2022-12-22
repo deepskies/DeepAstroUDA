@@ -67,15 +67,15 @@ Below are the list of commands, along with some possible approaches to using Dee
 | Command | Function |
 |:---|:---|
 | `deep_dance -h `| Displays a help prompt that gives a comprehensive overview of possible commands. |
-| deep_dance demo | Automatically runs the DANCE pipeline on the Astro-NN dataset. | 
-| deep_dance demo -h | Displays a help prompt that gives a cromprehensive overview of possible arguments and optionals. |
-| deep_dance demo --dataset={'office', 'astro-nn', 'gz2', 'deep-adv', 'data'} | Runs a chosen example dataset with default training configuration. Use the **'data'** option if you're running deep_dance on your own dataset. |
-| deep_dance demo --config-path={path\to\referenced\file} | Not a required value. Uses the provided path to get training configuration information from yaml. If file path not provided, a default training configuration yaml is created at the DEFAULT_PATH="./files/config_env/{dataset_name}-{num_classes}-train-config_{domain_type}. |
-| deep_dance demo --unknowns-supplied={Boolean} | Not a required value. Informs program whether to use auto-clustering or conform to number of clusters specified in config file. If the variable is not provided, then the training will default to supplied based on data directory structure. |
-| deep_dance demo --image-path-text={path\to\referenced\file} | Not a required value. Informs program whether an image directory to file path text file has been created. If optional is not supplied, a utility function will be called to create one. |
-| deep_dance demo --output-directory={path\to\referenced\directory} | Not a required value. Informs program whether a desired output directory exists for training and testing output. If optional is not supplied, an output directory structure will be created. |
-| deep_dance demo --data-type={'jpg', 'png', 'numpy'} | Not a required value. Informs program whether your personal dataset is in the form of jpeg, png, or .npy images/arrays. If optional is not supplied, program will (1) warn the user, and (2) infer the data type by peaking at the first data file available. |
-| deep_dance demo --domain-type={'open', 'open-partial', 'closed'} | Allows user to choose what type of domain adaptation is being used ('open-partial' covers both partial and open-partial). If not supplied, **open** is the default. For comparison model trained without domain adaptation is also trained in parallel with any domain adaptation training.|
+| `deep_dance demo `| Automatically runs the DANCE pipeline on the Astro-NN dataset. | 
+| `deep_dance demo -h` | Displays a help prompt that gives a cromprehensive overview of possible arguments and optionals. |
+| `deep_dance demo --dataset={'office', 'astro-nn', 'gz2', 'deep-adv', 'data'}` | Runs a chosen example dataset with default training configuration. Use the **'data'** option if you're running deep_dance on your own dataset. |
+| `deep_dance demo --config-path={path\to\referenced\file}` | Not a required value. Uses the provided path to get training configuration information from yaml. If file path not provided, a default training configuration yaml is created at the DEFAULT_PATH="./files/config_env/{dataset_name}-{num_classes}-train-config_{domain_type}. |
+| `deep_dance demo --unknowns-supplied={Boolean}` | Not a required value. Informs program whether to use auto-clustering or conform to number of clusters specified in config file. If the variable is not provided, then the training will default to supplied based on data directory structure. |
+| `deep_dance demo --image-path-text={path\to\referenced\file}` | Not a required value. Informs program whether an image directory to file path text file has been created. If optional is not supplied, a utility function will be called to create one. |
+| `deep_dance demo --output-directory={path\to\referenced\directory}` | Not a required value. Informs program whether a desired output directory exists for training and testing output. If optional is not supplied, an output directory structure will be created. |
+| `deep_dance demo --data-type={'jpg', 'png', 'numpy'}` | Not a required value. Informs program whether your personal dataset is in the form of jpeg, png, or .npy images/arrays. If optional is not supplied, program will (1) warn the user, and (2) infer the data type by peaking at the first data file available. |
+| `deep_dance demo --domain-type={'open', 'open-partial', 'closed'}` | Allows user to choose what type of domain adaptation is being used ('open-partial' covers both partial and open-partial). If not supplied, **open** is the default. For comparison model trained without domain adaptation is also trained in parallel with any domain adaptation training.|
 
 
 
