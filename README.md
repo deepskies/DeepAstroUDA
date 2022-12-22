@@ -66,7 +66,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 
 | Command | Function |
 |:---|:---|
-| deep_dance -h | Displays a help prompt that gives a comprehensive overview of possible commands. |
+| `deep_dance -h `| Displays a help prompt that gives a comprehensive overview of possible commands. |
 | deep_dance demo | Automatically runs the DANCE pipeline on the Astro-NN dataset. | 
 | deep_dance demo -h | Displays a help prompt that gives a cromprehensive overview of possible arguments and optionals. |
 | deep_dance demo --dataset={'office', 'astro-nn', 'gz2', 'deep-adv', 'data'} | Runs a chosen example dataset with default training configuration. Use the **'data'** option if you're running deep_dance on your own dataset. |
@@ -94,7 +94,26 @@ Below are the list of commands, along with some possible approaches to using Dee
 <!-- Checking links in paper [DeepAstroUDA Available Commands](#deep)
 -- feature table with hyperlink to different approaches to using DeepAstroUDA -->
 
-<!-- ### Approach 1: Run Examples <a name="example"></a> -->
+<!-- ### Approach 1: Run Minimal Example <a name="example"></a> -->
+To begin a minimal example run of the DeepAstroUDA code, pip install the package using the following code:
+`pip install deepastrouda`.
+
+Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
+
+```
+{
+  "path_to_ouput": "path/to/output/folder",
+  "environment_path": "path/to/venv/in/use",
+}
+```
+
+Lastly, begin the demo run using the command-line snippet below. All output from both training and testing will be dumped in the output folder.
+
+` deep_astro demo `
+
+For more help, run the following command-line code snippet:
+
+` deep_astro demo -h`
 
 <!-- ### Approach 2: Input Data + Default Training Configuration <a name="data-default"></a> -->
 
