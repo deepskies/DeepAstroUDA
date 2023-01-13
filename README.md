@@ -78,6 +78,8 @@ Below are the list of commands, along with some possible approaches to using Dee
 | `deep_dance demo --domain-type={'open', 'open-partial', 'closed'}` | Allows user to choose what type of domain adaptation is being used ('open-partial' covers both partial and open-partial). If not supplied, **open** is the default. For comparison model trained without domain adaptation is also trained in parallel with any domain adaptation training.|
 
 
+### Understanding the Configuration File
+
 
 
 ### Possible Experimental Setups
