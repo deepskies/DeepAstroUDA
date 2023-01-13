@@ -9,15 +9,15 @@ We develop a Universal Domain Adaptation method DeepAstroUDA, capable of perform
 
 ## Table of Contents
 1. [Intro and Experiments](#intro)
-2. Architecture
-3. Requirements
-4. Pieces of the Package
-5. Inputs
-6. Outputs
-7. Using DeepAstroUDA
-8. Commands and Optionals
-9. Possible Experimental Setups
-10. Running a Containerized Setup
+2. [Architecture](#architecture)
+3. [Requirements](#requirements)
+4. [Pieces of the Package](#package-pieces)
+5. [Inputs](#input)
+6. [Outputs](#output)
+7. [Using DeepAstroUDA](#deep-use)
+8. [Commands and Optionals](#deep)
+9. [Possible Experimental Setups](#setup)
+10. [Running a Containerized Setup](#container)
 
 
 ### Intro and Experiments <a name="intro"></a>
