@@ -8,7 +8,7 @@ We develop a Universal Domain Adaptation method DeepAstroUDA, capable of perform
 </div>
 
 ## Table of Contents
-1. Intro and Experiments
+1. [Intro and Experiments](#intro)
 2. Architecture
 3. Requirements
 4. Pieces of the Package
@@ -20,11 +20,11 @@ We develop a Universal Domain Adaptation method DeepAstroUDA, capable of perform
 10. Running a Containerized Setup
 
 
-### Intro and Experiments
+### Intro and Experiments <a name="intro"></a>
 In the era of big astronomical surveys, our ability to leverage artificial intelligence algorithms simultaneously for multiple datasets will open new avenues for scientific discovery. Unfortunately, simply training a deep neural network on images from one data domain often leads to very poor performance on any other dataset.
 For the first time, we demonstrate the successful use of domain adaptation on two very different observational datasets (from SDSS and DECaLS). We show that our method is capable of bridging the gap between two astronomical surveys, and also performs well for anomaly detection and clustering of unknown data in the unlabeled dataset. We apply our model to two examples of galaxy morphology classification tasks with anomaly detection: 1) classifying spiral and elliptical galaxies with detection of merging galaxies (three classes including one unknown anomaly class); 2) a more granular problem where the classes describe more detailed morphological properties of galaxies, with the detection of gravitational lenses (ten classes including one unknown anomaly class).
 
-### Architecture
+### Architecture <a name="architecture"></a>
 Our experiments were performed using a ResNet50 architecture, trained with early stopping that monitors the change in accuracy and stops the training when there is no improvement in 12 epochs. Domain-specific batch normalization is used to eliminates domain style information leakage. The model is trained using stochastic gradient descent with Nesterov momentum and an initial learning rate of 0.001. We train our models on 4 NVIDIA RTX A6000 GPUs (available from Google Colab and LambdaLabs), and on average the training converges in approximately 5 hours. 
 
 
@@ -40,15 +40,15 @@ Our experiments were performed using a ResNet50 architecture, trained with early
 <br>
 <br>
 
-### Requirements
+### Requirements <a name="requirements"></a>
 This code was developed using Pytorch. The poetry.lock file lists all Python libraries that your notebooks will need, and they can be installed using the following command:
 ```
 python3 -m poetry shell
 ```
 
-### Pieces of the Package
+### Pieces of the Package <a name="package-pieces"></a>
 
-#### Input
+#### Input <a name="input"></a>
 
 DeepAstroUDA includes access to the template files and sample datasets needed to run the system with varying amounts of input. Any sample datasets are automatically downloaded.
 
@@ -71,7 +71,7 @@ The following are the metric documents output by the system:
 - Accuracy CSV and plots (total, closed, and per class accuracy)
 - t-SNE plot and t-SNE visualization-tool file
 
-## Using DeepAstroUDA
+## Using DeepAstroUDA <a name="deep-use"></a>
 
 Below are the list of commands, along with some possible approaches to using DeepAstroUDA.
 
@@ -93,7 +93,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 
 
 
-### Possible Experimental Setups
+### Possible Experimental Setups <a name="setups"></a>
 
 To begin any example run of the DeepAstroUDA code, pip install the package using the following code:
 `pip install deepastrouda`. Any required data will be automatically downloaded by the package.
@@ -110,7 +110,8 @@ To begin any example run of the DeepAstroUDA code, pip install the package using
 
 #### Approach 1: Run Minimal Example <a name="example"></a>
 
-<!-- Explain the astro-nn dataset demo is cross domain and adds extra noise -->
+<!-- Explain that the chosen dataset demo is cross domain and adds extra noise -->
+By default, the built-in demo example uses the Astro-NN DECaLS selection as its base dataset, with the source and target being randomly selected, evenly-split portions of the data. This trial performs a cross-domain run where the source and target are the original input data and the input data with applied-noise, respectively. The dataset used can be configured for the demo. All datasets with the exception of DeepAdversaries will use the same setup of source and target being no-noise vs manually applied nosie. The DeepAdversaries data will its original split between the Y1 and Y10 datasets.
 
 Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
 
@@ -126,7 +127,7 @@ Lastly, begin the demo run using the command-line snippet below. All [output](#o
 ` deep_astro demo `
 
 If you'd like to use another example dataset listed above, you can use the command-line optional below to specify which dataset to use.
-``
+
 
 For more help, run the following command-line code snippet:
 
@@ -136,7 +137,10 @@ For more help, run the following command-line code snippet:
 
 
 
-<!-- ### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a> -->
+#### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a> 
+
+
+#### Approach 4: Running a Containerized Setup <a name="container"></a>
 
 
 ### Authors
