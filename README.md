@@ -152,16 +152,18 @@ To specify the path of your image dataset, run the following command:
 
 `deep_astro --image-path-text={path\to\referenced\file}	`
 
-Please ensure that the directory specified by your image path has the following structure:
+If you provide a source and target, please ensure that the directory specified by your image path has the following structure:
 
-`./image-directory
+    .
+    ├── ...
+    ├── image-directory                    # Your image data
+    │   ├── source          # Your source dataset
+    │   ├── target         # Your target dataset
+    │   └── ...                
+    └── ...
 
+If you do not provide a source and target, but instead only an image directory without any data splits, your dataset will have a source and target structure applied automatically. This will be done by splitting the data in half and manually adding noise to the created target dataset. 
 
-  -> /source/
-  
-  
-  -> /target/
-`
 
 If you are already aware of the number of unknown classes in your dataset, please specify in your `config.json` and use the appropriate command. For example, if you supply the unknown classes, you would have the following parameters set in your configuration file:
 
