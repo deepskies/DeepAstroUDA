@@ -135,7 +135,40 @@ For more help, run the following command-line code snippet:
 
 #### Approach 2: Input Data + Default Training Configuration <a name="data-default"></a> 
 
+Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
 
+```
+{
+  "path_to_ouput": "path/to/output/folder",
+  "environment_path": "path/to/venv/in/use",
+}
+```
+
+To specify the use of your own dataset, use the following command:
+
+`deep_astro --dataset=='data'`
+
+To specify the path of your image dataset, run the following command:
+
+`deep_astro --image-path-text={path\to\referenced\file}	`
+
+Please ensure that the directory specified by your image path has the following structure:
+
+`./image-directory
+  -> /source/
+  -> /target/
+`
+
+If you are already aware of the number of unknown classes in your dataset, please specify in your `config.json` and use the appropriate command. For example, if you supply the unknown classes, you would have the following parameters set in your configuration file:
+
+```
+{
+  "num_unknowns": "3",
+}
+```
+
+And run the command: 
+`deep_astro --unknowns-supplied=True`
 
 #### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a> 
 
