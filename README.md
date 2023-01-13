@@ -85,8 +85,8 @@ Below are the list of commands, along with some possible approaches to using Dee
 To begin any example run of the DeepAstroUDA code, pip install the package using the following code:
 `pip install deepastrouda`. Any required data will be automatically downloaded by the package.
 
-
-|:---||
+|Example Scenarios|
+|:---|
 | [Run a Simple Example ](#example) |
 | [Using Input Data + Default Training Configuration](#data-default) |
 | [Using Input Data + Input Training Configuration](#data-config) |
@@ -96,6 +96,8 @@ To begin any example run of the DeepAstroUDA code, pip install the package using
 -- feature table with hyperlink to different approaches to using DeepAstroUDA -->
 
 #### Approach 1: Run Minimal Example <a name="example"></a>
+
+<!-- Explain the astro-nn dataset demo is cross domain and adds extra noise -->
 
 Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
 
@@ -111,6 +113,7 @@ Lastly, begin the demo run using the command-line snippet below. All [output](#o
 ` deep_astro demo `
 
 If you'd like to use another example dataset listed above, you can use the command-line optional below to specify which dataset to use.
+``
 
 For more help, run the following command-line code snippet:
 
