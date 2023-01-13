@@ -111,7 +111,7 @@ To begin any example run of the DeepAstroUDA code, pip install the package using
 #### Approach 1: Run Minimal Example <a name="example"></a>
 
 <!-- Explain that the chosen dataset demo is cross domain and adds extra noise -->
-By default, the built-in demo example uses the Astro-NN DECaLS selection as its base dataset, with the source and target being randomly selected, evenly-split portions of the data. This trial performs a cross-domain run where the source and target are the original input data and the input data with applied-noise, respectively. The dataset used can be configured for the demo. All datasets with the exception of DeepAdversaries will use the same setup of source and target being no-noise vs manually applied nosie. The DeepAdversaries data will its original split between the Y1 and Y10 datasets.
+By default, the built-in demo example uses the Astro-NN DECaLS selection as its base dataset, with the source and target being randomly selected, evenly-split portions of the data. The source is the original input data with no modifications, and the target is the  input data with manually applied-noise. This trial performs a cross-domain run. The dataset used can be changed for the demo. All datasets with the exception of DeepAdversaries will use the same setup of source and target being no-noise vs manually applied noise, respectively. The DeepAdversaries data will use its original Y1 and Y10 datasets.
 
 Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
 
