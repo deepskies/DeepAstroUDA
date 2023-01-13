@@ -176,6 +176,8 @@ If you are already aware of the number of unknown classes in your dataset, pleas
 And run the command: 
 `deep_astro --unknowns-supplied=True`
 
+<!-- Add deep-astro-run command so that people know how to actually run the code when everything is specified. -->
+
 #### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a> 
 
 
