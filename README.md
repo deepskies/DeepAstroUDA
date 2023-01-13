@@ -155,7 +155,11 @@ To specify the path of your image dataset, run the following command:
 Please ensure that the directory specified by your image path has the following structure:
 
 `./image-directory
+
+
   -> /source/
+  
+  
   -> /target/
 `
 
