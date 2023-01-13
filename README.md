@@ -86,7 +86,7 @@ To begin any example run of the DeepAstroUDA code, pip install the package using
 `pip install deepastrouda`. Any required data will be automatically downloaded by the package.
 
 
-|:---|
+|:---||
 | [Run a Simple Example ](#example) |
 | [Using Input Data + Default Training Configuration](#data-default) |
 | [Using Input Data + Input Training Configuration](#data-config) |
