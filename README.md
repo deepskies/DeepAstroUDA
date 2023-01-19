@@ -17,8 +17,6 @@ We develop a Universal Domain Adaptation method DeepAstroUDA, capable of perform
 7. [Using DeepAstroUDA](#deep-use)
 8. [Commands and Optionals](#deep)
 9. [Possible Experimental Setups](#setup)
-10. [Running a Containerized Setup](#container)
-
 
 ### Intro and Experiments <a name="intro"></a>
 In the era of big astronomical surveys, our ability to leverage artificial intelligence algorithms simultaneously for multiple datasets will open new avenues for scientific discovery. Unfortunately, simply training a deep neural network on images from one data domain often leads to very poor performance on any other dataset.
