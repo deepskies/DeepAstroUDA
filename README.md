@@ -10,7 +10,7 @@ We develop a Universal Domain Adaptation method DeepAstroUDA, capable of perform
 ## Table of Contents
 1. [Intro and Experiments](#intro)
 2. [Architecture](#architecture)
-3. [Requirements](#requirements)
+3. [Installation](#requirements)
 4. [Pieces of the Package](#package-pieces)
 5. [Inputs](#input)
 6. [Outputs](#output)
@@ -38,10 +38,10 @@ Our experiments were performed using a ResNet50 architecture, trained with early
 <br>
 <br>
 
-### Requirements <a name="requirements"></a>
-This code was developed using Pytorch. The poetry.lock file lists all Python libraries that your notebooks will need, and they can be installed using the following command:
+### Installation <a name="requirements"></a>
+This code was developed using Pytorch. DeepAstroUDA has been packaged using PyPI, and can be pip installed much like a normal Python package:
 ```
-python3 -m poetry shell
+pip install deep_astro
 ```
 
 ### Pieces of the Package <a name="package-pieces"></a>
