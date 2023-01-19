@@ -103,6 +103,7 @@ To begin any example run of the DeepAstroUDA code, pip install the package using
 | [Run a Simple Example ](#example) |
 | [Using Input Data + Default Training Configuration](#data-default) |
 | [Using Input Data + Input Training Configuration](#data-config) |
+| [Running a Containerized Setup](#container) | 
 
 
 <!-- Checking links in paper [DeepAstroUDA Available Commands](#deep)
