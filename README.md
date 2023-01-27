@@ -94,7 +94,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 ### Possible Experimental Setups <a name="setups"></a>
 
 To begin any example run of the DeepAstroUDA code, pip install the package using the following code:
-`pip install deepastrouda`. Any required data will be automatically downloaded by the package.
+`pip install deepastrouda`. Any required data will be automatically downloaded by the package. Please see the provided template `config.json` for a comprehensive look at what training, testing, and output parameters are available. 
 
 |Example Scenarios|
 |:---|
@@ -110,7 +110,7 @@ To begin any example run of the DeepAstroUDA code, pip install the package using
 #### Approach 1: Run Minimal Example <a name="example"></a>
 
 <!-- Explain that the chosen dataset demo is cross domain and adds extra noise -->
-By default, the built-in demo example uses the Astro-NN DECaLS selection as its base dataset, with the source and target being randomly selected, evenly-split portions of the data. The source is the original input data with no modifications, and the target is the  input data with manually applied-noise. This trial performs a cross-domain run. The dataset used can be changed for the demo. All datasets with the exception of DeepAdversaries will use the same setup of source and target being no-noise vs manually applied noise, respectively. The DeepAdversaries data will use its original Y1 and Y10 datasets.
+By default, the built-in demo example uses the Astro-NN DECaLS selection as its base dataset, with the source and target being randomly selected, evenly-split portions of the data. The source is the original input data with no modifications, and the target is the  input data with manually applied-noise. The dataset used can be changed for the demo. All datasets with the exception of DeepAdversaries will use the same setup of source and target being no-noise vs manually applied noise, respectively. The DeepAdversaries data will use its original Y1 and Y10 datasets.
 
 Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
 
@@ -134,7 +134,7 @@ For more help, run the following command-line code snippet:
 
 #### Approach 2: Input Data + Default Training Configuration <a name="data-default"></a> 
 
-Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
+Users should configure their desired output paths and project environment path in their `config.json` file as follows:
 
 ```
 {
@@ -188,7 +188,7 @@ deep_astro infer
 ```
 
 #### Approach 3: Input Data + Input Training Configuration File <a name="data-config"></a> 
-Users should then configure their desired output paths and project environment path in their `config.json` file as follows:
+Users should configure their desired output paths and project environment path in their `config.json` file as follows:
 
 ```
 {
@@ -269,8 +269,8 @@ docker run --rm -it -e src=$PWD,dst=/deep_astro deep_astro infer.py
  All optionals and arguments that are provided by Docker for configuring the `run` command are also available.
 
 ### Authors
-- Aleksandra Ćiprijanović
 - Ashia Lewis
+- Aleksandra Ćiprijanović
 
 ### References
 If you use this code, please cite our paper: [arXiv:2211.00677](https://arxiv.org/abs/2211.00677)
