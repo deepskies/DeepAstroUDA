@@ -275,4 +275,4 @@ docker run --rm -it -e src=$PWD,dst=/deep_astro deep_astro infer.py
 - Aleksandra Ćiprijanović
 
 ### References
-If you use this code, please cite our paper: [arXiv:2211.00677](https://arxiv.org/abs/2211.00677)
+If you use this code, please cite our paper: [arXiv:2302.02005](https://arxiv.org/abs/2302.02005), [arXiv:2211.00677](https://arxiv.org/abs/2211.00677)
