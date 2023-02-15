@@ -1,6 +1,6 @@
 data:
   dataset:
-    name: office # choices are ['astro-nn', 'gz2', 'decals', 'adversaries']
+    name: office # choices are ['office','astro-nn', 'gz2', 'decals', 'adversaries']
     n_share: 2 # number of classes to be shared
     n_source_private: 0 # number of classes in source private domain
     n_total: 10 # number of classes in total
