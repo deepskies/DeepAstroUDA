@@ -27,8 +27,6 @@ num_initial_points = self.num_initial_points or max(3 * dimensions, 3)
 if len(completed_trials) < num_initial_points:
     return self._random_populate_space()
 
-# Fit a GPR to the completed trials and return the predicted optimum
-# values.
 x, y = self._vectorize_trials()
 
 # Ensure no nan, inf in x, y. GPR cannot process nan or inf.
