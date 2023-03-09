@@ -1,58 +1,79 @@
+import numpy as np
 
-        # Use 3 times the dimensionality of the space as the default number of
-        # random points.
-        dimensions = len(self.hyperparameters.space)
-        num_initial_points = self.num_initial_points or max(3 * dimensions, 3)
-        if len(completed_trials) < num_initial_points:
-            return self._random_populate_space()
+try:
+    import sklearn
+    import sklearn.exceptions
+    import sklearn.gaussian_process
+except ImportError:  # pragma: no cover
+    sklearn = None  # pragma: no cover
 
-        # Fit a GPR to the completed trials and return the predicted optimum
-        # values.
-        x, y = self._vectorize_trials()
+try:
+    import scipy
+    import scipy.optimize
+except ImportError:  # pragma: no cover
+    scipy = None  # pragma: no cover
 
-        # Ensure no nan, inf in x, y. GPR cannot process nan or inf.
-        x = np.nan_to_num(x, posinf=0, neginf=0)
-        y = np.nan_to_num(y, posinf=0, neginf=0)
+from keras_tuner.api_export import keras_tuner_export
+from keras_tuner.engine import hyperparameters as hp_module
+from keras_tuner.engine import oracle as oracle_module
+from keras_tuner.engine import trial as trial_module
+from keras_tuner.engine import tuner as tuner_module
 
-        self.gpr.fit(x, y)
 
-        def _upper_confidence_bound(x):
-            x = x.reshape(1, -1)
-            mu, sigma = self.gpr.predict(x, return_std=True)
-            return mu - self.beta * sigma
+# Use 3 times the dimensionality of the space as the default number of
+# random points.
+dimensions = len(self.hyperparameters.space)
+num_initial_points = self.num_initial_points or max(3 * dimensions, 3)
+if len(completed_trials) < num_initial_points:
+    return self._random_populate_space()
 
-        optimal_val = float("inf")
-        optimal_x = None
-        num_restarts = 50
-        bounds = self._get_hp_bounds()
-        x_seeds = self._random_state.uniform(
-            bounds[:, 0], bounds[:, 1], size=(num_restarts, bounds.shape[0])
-        )
-        for x_try in x_seeds:
-            # Sign of score is flipped when maximizing.
-            result = scipy.optimize.minimize(
-                _upper_confidence_bound,
-                x0=x_try,
-                bounds=bounds,
-                method="L-BFGS-B",
-            )
-            result_fun = (
-                result.fun if np.isscalar(result.fun) else result.fun[0]
-            )
-            if result_fun < optimal_val:
-                optimal_val = result_fun
-                optimal_x = result.x
+# Fit a GPR to the completed trials and return the predicted optimum
+# values.
+x, y = self._vectorize_trials()
 
-        values = self._vector_to_values(optimal_x)
-        return {"status": trial_module.TrialStatus.RUNNING, "values": values}
+# Ensure no nan, inf in x, y. GPR cannot process nan or inf.
+x = np.nan_to_num(x, posinf=0, neginf=0)
+y = np.nan_to_num(y, posinf=0, neginf=0)
 
-    def _random_populate_space(self):
+self.gpr.fit(x, y)
+
+def _upper_confidence_bound(x):
+    x = x.reshape(1, -1)
+    mu, sigma = self.gpr.predict(x, return_std=True)
+    return mu - self.beta * sigma
+
+optimal_val = float("inf")
+optimal_x = None
+num_restarts = 50
+bounds = self._get_hp_bounds()
+x_seeds = self._random_state.uniform(
+    bounds[:, 0], bounds[:, 1], size=(num_restarts, bounds.shape[0])
+)
+for x_try in x_seeds:
+    # Sign of score is flipped when maximizing.
+    result = scipy.optimize.minimize(
+        _upper_confidence_bound,
+        x0=x_try,
+        bounds=bounds,
+        method="L-BFGS-B",
+    )
+    result_fun = (
+        result.fun if np.isscalar(result.fun) else result.fun[0]
+    )
+    if result_fun < optimal_val:
+        optimal_val = result_fun
+        optimal_x = result.x
+
+values = self._vector_to_values(optimal_x)
+return {"status": trial_module.TrialStatus.RUNNING, "values": values}
+
+def _random_populate_space(self):
         values = self._random_values()
         if values is None:
             return {"status": trial_module.TrialStatus.STOPPED, "values": None}
         return {"status": trial_module.TrialStatus.RUNNING, "values": values}
 
-    def get_state(self):
+def get_state(self):
         state = super().get_state()
         state.update(
             {
@@ -63,14 +84,14 @@
         )
         return state
 
-    def set_state(self, state):
+def set_state(self, state):
         super().set_state(state)
         self.num_initial_points = state["num_initial_points"]
         self.alpha = state["alpha"]
         self.beta = state["beta"]
         self.gpr = self._make_gpr()
 
-    def _vectorize_trials(self):
+def _vectorize_trials(self):
         x = []
         y = []
         ongoing_trials = set(self.ongoing_trials.values())
@@ -94,29 +115,29 @@
                 prob = hp.value_to_prob(trial_value)
                 vector.append(prob)
 
-            if trial in ongoing_trials:
-                # "Hallucinate" the results of ongoing trials. This ensures that
-                # repeat trials are not selected when running distributed.
-                x_h = np.array(vector).reshape((1, -1))
-                y_h_mean, y_h_std = self.gpr.predict(x_h, return_std=True)
-                # Give a pessimistic estimate of the ongoing trial.
-                score = y_h_mean[0] + y_h_std[0]
-            elif trial.status == "COMPLETED":
-                score = trial.score
-                # Always frame the optimization as a minimization for
-                # scipy.minimize.
-                if self.objective.direction == "max":
-                    score = -1 * score
-            elif trial.status in ["FAILED", "INVALID"]:
-                # Skip the failed and invalid trials.
-                continue
+    if trial in ongoing_trials:
+        # "Hallucinate" the results of ongoing trials. This ensures that
+        # repeat trials are not selected when running distributed.
+        x_h = np.array(vector).reshape((1, -1))
+        y_h_mean, y_h_std = self.gpr.predict(x_h, return_std=True)
+        # Give a pessimistic estimate of the ongoing trial.
+        score = y_h_mean[0] + y_h_std[0]
+    elif trial.status == "COMPLETED":
+        score = trial.score
+        # Always frame the optimization as a minimization for
+        # scipy.minimize.
+        if self.objective.direction == "max":
+            score = -1 * score
+    elif trial.status in ["FAILED", "INVALID"]:
+        # Skip the failed and invalid trials.
+        continue
 
-            x.append(vector)
-            y.append(score)
+    x.append(vector)
+    y.append(score)
 
-        x = np.array(x)
-        y = np.array(y)
-        return x, y
+x = np.array(x)
+y = np.array(y)
+return x, y
 
     def _vector_to_values(self, vector):
         hps = hp_module.HyperParameters()
