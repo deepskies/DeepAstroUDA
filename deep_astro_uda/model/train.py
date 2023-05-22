@@ -7,13 +7,13 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch.autograd import Variable
 import torchvision.transforms as transforms
-from apex import amp, optimizers
-from data_loader.get_loader import get_loader
+from deep_astro_uda.apex import amp, optimizers
+from deep_astro_uda.model.get_loader import get_loader
 from utils.utils import *
-from utils.lr_schedule import inv_lr_scheduler
-from utils.loss import *
+from deep_astro_uda.model.lr_schedule import inv_lr_scheduler
+from deep_astro_uda.model.loss import *
 from models.LinearAverage import LinearAverage
-from eval import test
+from deep_astro_uda.model.eval import test
 
 # Training settings
 

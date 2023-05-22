@@ -4,6 +4,7 @@ data:
     n_share: 2 # number of classes to be shared
     n_source_private: 0 # number of classes in source private domain
     n_total: 10 # number of classes in total
+    num_knowns: 3
   dataloader:
     class_balance: true #
     data_workers: 3 # how many workers to use for train dataloaders
@@ -33,3 +34,7 @@ misc:
 log:
   root_dir: log # the log directory (log directory will be {root_dir}/{method}/time/)
   log_interval: 10 # steps to log scalars
+output:
+  output_path: './deepastro_files/'
+  model_path: './deepastro_files/models/'
+  viz_path: './deepastro_files/plots/'
