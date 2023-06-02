@@ -41,7 +41,7 @@ Our experiments were performed using a ResNet50 architecture, trained with early
 ### Installation <a name="requirements"></a>
 This code was developed using Pytorch. DeepAstroUDA has been packaged using PyPI, and can be pip installed much like a normal Python package:
 ```
-pip install deepastrouda
+pip install deep-astro-uda
 ```
 
 ### Pieces of the Package <a name="package-pieces"></a>
