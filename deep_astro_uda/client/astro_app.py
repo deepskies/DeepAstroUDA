@@ -1,4 +1,4 @@
-from cleo import Application
+from cleo.application import Application
 #from commands.commands import DeepDanceRun
 
 import sys

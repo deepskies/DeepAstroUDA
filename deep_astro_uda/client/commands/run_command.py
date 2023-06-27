@@ -1,4 +1,4 @@
-from cleo import Command
+from cleo.commands.command import Command
 from deep_astro_uda.client.options import full_options
 from deep_astro_uda.configs.config_functions import ConfigParser
 from deep_astro_uda.data_utils.download_data import Downloader
