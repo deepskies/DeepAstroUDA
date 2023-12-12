@@ -1,4 +1,4 @@
-from cleo import Command
+from cleo.commands.command import Command
 
 class InferCommand(Command):
 

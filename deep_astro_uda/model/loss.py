@@ -15,7 +15,7 @@ def get_losses_unlabeled(args, G, F1, im_data, im_data_bar, im_data_bar2, target
     output_bar = F1(feat_bar, reverse=True, eta=1.0)
     prob, prob_bar = F.softmax(output, dim=1), F.softmax(output_bar, dim=1)
     
-    # loss for adversarial adpative clustering
+    # loss for adversarial adaptive clustering
     aac_loss = advbce_unlabeled(args, target=target, feat=feat, prob=prob, prob_bar=prob_bar, device=device, bce=BCE)
 
     output = F1(feat)
@@ -38,7 +38,7 @@ def get_losses_unlabeled(args, G, F1, im_data, im_data_bar, im_data_bar2, target
     return aac_loss, pl_loss, con_loss
 
 def advbce_unlabeled(args, target, feat, prob, prob_bar, device, bce):
-    """ Construct adversarial adpative clustering loss."""
+    """ Construct adversarial adaptive clustering loss."""
     target_ulb = pairwise_target(args, feat, target, device)
     prob_bottleneck_row, _ = PairEnum2D(prob)
     _, prob_bottleneck_col = PairEnum2D(prob_bar)

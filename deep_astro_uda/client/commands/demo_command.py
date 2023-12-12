@@ -1,5 +1,5 @@
-from cleo import option
-from cleo import Command
+from cleo.helpers import option
+from cleo.commands.command import Command
 from deep_astro_uda.model.train import train
 from deep_astro_uda.settings import DEFAULT_CONFIG_PATH
 from deep_astro_uda.client.options import config_path
