@@ -1,0 +1,30 @@
+name: publish-bench
+on:
+  release:
+    types:  [published]
+
+jobs:
+  release:
+    runs-on:  ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+    - name: Install poetry ${{ matrix.poetry-version }}
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+      run: |
+        python -m ensurepip
+        python -m pip install --upgrade pip
+        python -m pip install poetry==1.7.1
+    - name: View poetry --help
+      run: poetry --help
+    - name: Install dependencies
+      shell: bash
+      run: python -m poetry install
+    - name: Build package
+      run: python3 -m poetry build
+    - name: Publish Package
+      run: python3 -m poetry publish --username=__token__ --password=${{secrets.PYPI_TOKEN}}
