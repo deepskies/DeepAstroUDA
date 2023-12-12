@@ -7,7 +7,15 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-cleo = "^2.0.1"
+cleo = "^2.1.0"
+pyyaml = "^6.0.1"
+easydict = "^1.11"
+numpy = "^1.26.2"
+torch = "^2.1.1"
+torchvision = "^0.16.1"
+astronn = "1.0"
+pillow = "^10.1.0"
+keras-tuner = "^1.4.6"
 
 
 [build-system]
