@@ -2,7 +2,7 @@ import math
 import torch
 import importlib
 import amp_C
-from apex.multi_tensor_apply import multi_tensor_applier
+from deep_astro_uda.apex.multi_tensor_apply import multi_tensor_applier
 
 class DistributedFusedAdamV3(torch.optim.Optimizer):
 

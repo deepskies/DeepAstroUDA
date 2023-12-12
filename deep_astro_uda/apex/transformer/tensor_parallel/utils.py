@@ -14,7 +14,7 @@
 # limitations under the License.
 import torch
 
-from apex.transformer.utils import divide
+from deep_astro_uda.apex.transformer.utils import divide
 
 
 def split_tensor_along_last_dim(tensor, num_partitions, contiguous_split_chunks=False):

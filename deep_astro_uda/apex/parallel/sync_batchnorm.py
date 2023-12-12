@@ -3,7 +3,7 @@ from torch.nn.modules.batchnorm import _BatchNorm
 from torch.nn import functional as F
 
 from .sync_batchnorm_kernel import SyncBatchnormFunction
-from apex.parallel import ReduceOp
+from . import ReduceOp
 
 
 class SyncBatchNorm(_BatchNorm):

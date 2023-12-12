@@ -14,9 +14,9 @@
 # limitations under the License.
 import torch
 
-from apex.transformer.parallel_state import get_tensor_model_parallel_group
-from apex.transformer.parallel_state import get_tensor_model_parallel_rank
-from apex.transformer.parallel_state import get_tensor_model_parallel_src_rank
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_group
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_rank
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_src_rank
 
 
 _MAX_DATA_DIM = 5

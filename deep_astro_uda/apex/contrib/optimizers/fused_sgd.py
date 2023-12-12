@@ -2,7 +2,7 @@ import types
 import torch
 from torch.optim.optimizer import Optimizer, required
 
-from apex.multi_tensor_apply import multi_tensor_applier
+from deep_astro_uda.apex.multi_tensor_apply import multi_tensor_applier
 
 class FusedSGD(Optimizer):
     r"""Implements stochastic gradient descent (optionally with momentum).

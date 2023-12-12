@@ -15,11 +15,11 @@
 
 """Model parallel utility interface."""
 
-from apex.transformer.tensor_parallel.cross_entropy import vocab_parallel_cross_entropy
+from deep_astro_uda.apex.transformer.tensor_parallel.cross_entropy import vocab_parallel_cross_entropy
 
-from apex.transformer.tensor_parallel.data import broadcast_data
+from deep_astro_uda.apex.transformer.tensor_parallel.data import broadcast_data
 
-from apex.transformer.tensor_parallel.layers import (
+from deep_astro_uda.apex.transformer.tensor_parallel.layers import (
     ColumnParallelLinear,
     RowParallelLinear,
     VocabParallelEmbedding,
@@ -28,7 +28,7 @@ from apex.transformer.tensor_parallel.layers import (
     copy_tensor_model_parallel_attributes,
 )
 
-from apex.transformer.tensor_parallel.mappings import (
+from deep_astro_uda.apex.transformer.tensor_parallel.mappings import (
     copy_to_tensor_model_parallel_region,
     gather_from_tensor_model_parallel_region,
     reduce_from_tensor_model_parallel_region,
@@ -43,7 +43,7 @@ from .random import (
     reset_checkpointed_activations_memory_buffer,
 )
 
-from apex.transformer.tensor_parallel.utils import split_tensor_along_last_dim
+from deep_astro_uda.apex.transformer.tensor_parallel.utils import split_tensor_along_last_dim
 
 
 __all__ = [

@@ -6,7 +6,7 @@ from torch.nn.parameter import Parameter
 from torch.nn import init
 from torch.nn import functional as F
 
-from apex._autocast_utils import _cast_if_autocast_enabled
+from deep_astro_uda.apex._autocast_utils import _cast_if_autocast_enabled
 
 global fused_layer_norm_cuda
 fused_layer_norm_cuda = None

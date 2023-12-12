@@ -19,11 +19,11 @@ from typing import Union, Optional, Tuple
 
 import torch
 
-from apex.transformer import parallel_state
-from apex.transformer.utils import split_tensor_into_1d_equal_chunks
-from apex.transformer.utils import gather_split_1d_tensor
-from apex.transformer.pipeline_parallel.utils import Shape
-from apex.transformer.pipeline_parallel._timers import _Timers
+from deep_astro_uda.apex.transformer import parallel_state
+from deep_astro_uda.apex.transformer.utils import split_tensor_into_1d_equal_chunks
+from deep_astro_uda.apex.transformer.utils import gather_split_1d_tensor
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import Shape
+from deep_astro_uda.apex.transformer.pipeline_parallel._timers import _Timers
 
 
 def _run_p2pops(

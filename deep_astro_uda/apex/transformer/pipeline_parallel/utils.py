@@ -19,11 +19,11 @@ from typing import Optional, List, Union
 import torch
 from torch.nn.parallel import DistributedDataParallel
 
-from apex.multi_tensor_apply import multi_tensor_applier
-from apex.transformer import parallel_state
-from apex.transformer.enums import ModelType
-from apex.transformer.microbatches import build_num_microbatches_calculator
-from apex.transformer.pipeline_parallel._timers import _Timers
+from deep_astro_uda.apex.multi_tensor_apply import multi_tensor_applier
+from deep_astro_uda.apex.transformer import parallel_state
+from deep_astro_uda.apex.transformer.enums import ModelType
+from deep_astro_uda.apex.transformer.microbatches import build_num_microbatches_calculator
+from deep_astro_uda.apex.transformer.pipeline_parallel._timers import _Timers
 if multi_tensor_applier.available:
     import amp_C
 

@@ -3,14 +3,14 @@ from typing import Any, Callable, Dict, List, Tuple, Union, Optional, Sequence
 import torch
 from torch.autograd.variable import Variable
 
-from apex.transformer import parallel_state
-from apex.transformer.enums import ModelType
-from apex.transformer.pipeline_parallel.utils import get_num_microbatches
-from apex.transformer.pipeline_parallel.utils import listify_model
-from apex.transformer.pipeline_parallel.utils import unwrap_model
-from apex.transformer.pipeline_parallel.utils import get_model_type
-from apex.transformer.tensor_parallel.layers import set_defaults_if_not_set_tensor_model_parallel_attributes
-from apex.transformer.log_util import get_transformer_logger
+from deep_astro_uda.apex.transformer import parallel_state
+from deep_astro_uda.apex.transformer.enums import ModelType
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import get_num_microbatches
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import listify_model
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import unwrap_model
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import get_model_type
+from deep_astro_uda.apex.transformer.tensor_parallel.layers import set_defaults_if_not_set_tensor_model_parallel_attributes
+from deep_astro_uda.apex.transformer.log_util import get_transformer_logger
 
 
 _logger = get_transformer_logger(__name__)

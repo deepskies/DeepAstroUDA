@@ -3,15 +3,15 @@ from typing import List, Union, Optional
 
 import torch
 
-from apex.transformer.pipeline_parallel.utils import listify_model
-from apex.transformer.pipeline_parallel.utils import get_num_microbatches
-from apex.transformer.pipeline_parallel.utils import get_kth_microbatch
-from apex.transformer.pipeline_parallel.utils import get_model_type
-from apex.transformer.pipeline_parallel.schedules.common import Batch
-from apex.transformer.pipeline_parallel.schedules.common import FwdStepFunc
-from apex.transformer.pipeline_parallel.schedules.common import forward_step
-from apex.transformer.pipeline_parallel.schedules.common import backward_step
-from apex.transformer.log_util import get_transformer_logger
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import listify_model
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import get_num_microbatches
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import get_kth_microbatch
+from deep_astro_uda.apex.transformer.pipeline_parallel.utils import get_model_type
+from deep_astro_uda.apex.transformer.pipeline_parallel.schedules.common import Batch
+from deep_astro_uda.apex.transformer.pipeline_parallel.schedules.common import FwdStepFunc
+from deep_astro_uda.apex.transformer.pipeline_parallel.schedules.common import forward_step
+from deep_astro_uda.apex.transformer.pipeline_parallel.schedules.common import backward_step
+from deep_astro_uda.apex.transformer.log_util import get_transformer_logger
 
 
 _all__ = ["forward_backward_no_pipelining"]

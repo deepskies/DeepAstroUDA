@@ -14,10 +14,10 @@
 # limitations under the License.
 import torch
 
-from apex.transformer.parallel_state import get_tensor_model_parallel_group
-from apex.transformer.parallel_state import get_tensor_model_parallel_rank
-from apex.transformer.parallel_state import get_tensor_model_parallel_world_size
-from apex.transformer.tensor_parallel.utils import VocabUtility
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_group
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_rank
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_world_size
+from deep_astro_uda.apex.transformer.tensor_parallel.utils import VocabUtility
 
 
 class _VocabParallelCrossEntropy(torch.autograd.Function):

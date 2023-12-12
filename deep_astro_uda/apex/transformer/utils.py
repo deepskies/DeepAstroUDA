@@ -1,7 +1,7 @@
 """Utility functions used by both `pipeline_parallel` and `tensor_parallel`"""
 import torch
 
-from apex.transformer import parallel_state
+from deep_astro_uda.apex.transformer import parallel_state
 
 
 def ensure_divisibility(numerator, denominator):

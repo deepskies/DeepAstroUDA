@@ -2,7 +2,7 @@ from collections import defaultdict
 
 import torch
 
-from apex.transformer import parallel_state
+from deep_astro_uda.apex.transformer import parallel_state
 
 
 class GradScaler(torch.cuda.amp.GradScaler):

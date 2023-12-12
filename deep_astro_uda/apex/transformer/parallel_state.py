@@ -17,7 +17,7 @@ from typing import Tuple, Optional
 
 import torch
 
-from apex.transformer.utils import ensure_divisibility
+from deep_astro_uda.apex.transformer.utils import ensure_divisibility
 
 
 # Intra-layer model parallel group that the current rank belongs to.

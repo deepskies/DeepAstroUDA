@@ -21,17 +21,17 @@ import torch.nn.functional as F
 import torch.nn.init as init
 from torch.nn.parameter import Parameter
 
-from apex._autocast_utils import _cast_if_autocast_enabled
-from apex.transformer.parallel_state import get_tensor_model_parallel_group
-from apex.transformer.parallel_state import get_tensor_model_parallel_rank
-from apex.transformer.parallel_state import get_tensor_model_parallel_world_size
-from apex.transformer.utils import divide
-from apex.transformer.tensor_parallel.mappings import copy_to_tensor_model_parallel_region
-from apex.transformer.tensor_parallel.mappings import gather_from_tensor_model_parallel_region
-from apex.transformer.tensor_parallel.mappings import reduce_from_tensor_model_parallel_region
-from apex.transformer.tensor_parallel.mappings import scatter_to_tensor_model_parallel_region
-from apex.transformer.tensor_parallel.random import get_cuda_rng_tracker
-from apex.transformer.tensor_parallel.utils import VocabUtility
+from deep_astro_uda.apex._autocast_utils import _cast_if_autocast_enabled
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_group
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_rank
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_world_size
+from deep_astro_uda.apex.transformer.utils import divide
+from deep_astro_uda.apex.transformer.tensor_parallel.mappings import copy_to_tensor_model_parallel_region
+from deep_astro_uda.apex.transformer.tensor_parallel.mappings import gather_from_tensor_model_parallel_region
+from deep_astro_uda.apex.transformer.tensor_parallel.mappings import reduce_from_tensor_model_parallel_region
+from deep_astro_uda.apex.transformer.tensor_parallel.mappings import scatter_to_tensor_model_parallel_region
+from deep_astro_uda.apex.transformer.tensor_parallel.random import get_cuda_rng_tracker
+from deep_astro_uda.apex.transformer.tensor_parallel.utils import VocabUtility
 
 
 _MODEL_PARALLEL_ATTRIBUTE_DEFAULTS = {

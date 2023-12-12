@@ -22,8 +22,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from apex.transformer import parallel_state
-from apex.transformer.pipeline_parallel import get_forward_backward_func
+from deep_astro_uda.apex.transformer import parallel_state
+from deep_astro_uda.apex.transformer.pipeline_parallel import get_forward_backward_func
 
 
 class Model(nn.Module):

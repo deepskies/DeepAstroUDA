@@ -3,7 +3,7 @@ from copy import deepcopy
 from itertools import chain
 from collections import defaultdict, abc as container_abcs
 
-from apex.multi_tensor_apply import multi_tensor_applier
+from deep_astro_uda.apex.multi_tensor_apply import multi_tensor_applier
 
 class FusedMixedPrecisionLamb(torch.optim.Optimizer):
 

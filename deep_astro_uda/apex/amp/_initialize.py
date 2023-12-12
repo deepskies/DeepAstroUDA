@@ -1,21 +1,20 @@
 import torch
-from torch._six import string_classes
 import functools
 import numpy as np
 import sys
 from types import MethodType
 import warnings
-from ._amp_state import _amp_state, warn_or_err, container_abcs
-from .handle import disable_casts
-from .scaler import LossScaler
-from ._process_optimizer import _process_optimizer
-from apex.fp16_utils import convert_network
-from ..fp16_utils import FP16_Optimizer as FP16_Optimizer_general
-from ..contrib.optimizers import FP16_Optimizer as FP16_Optimizer_for_fused
+from deep_astro_uda.apex.amp._amp_state import _amp_state, warn_or_err
+from deep_astro_uda.apex.amp.handle import disable_casts
+from deep_astro_uda.apex.amp.scaler import LossScaler
+from deep_astro_uda.apex.amp._process_optimizer import _process_optimizer
+from deep_astro_uda.apex.fp16_utils import convert_network
+from deep_astro_uda.apex.fp16_utils import FP16_Optimizer as FP16_Optimizer_general
+from deep_astro_uda.apex.contrib.optimizers import FP16_Optimizer as FP16_Optimizer_for_fused
 
 if torch.distributed.is_available():
-    from ..parallel import DistributedDataParallel as apex_DDP
-    from ..parallel.LARC import LARC
+    from deep_astro_uda.apex.parallel import DistributedDataParallel as apex_DDP
+    from deep_astro_uda.apex.parallel.LARC import LARC
 
 
 def to_type(dtype, t):
@@ -39,8 +38,6 @@ def to_type(dtype, t):
 def applier(value, fn):
     if isinstance(value, torch.Tensor):
         return fn(value)
-    elif isinstance(value, string_classes):
-        return value
     elif isinstance(value, np.ndarray):
         return value
     elif hasattr(value, "to"): # Allow handling of custom batch classes

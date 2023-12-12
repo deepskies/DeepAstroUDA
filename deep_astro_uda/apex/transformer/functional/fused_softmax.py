@@ -14,8 +14,8 @@
 # limitations under the License.
 import torch
 
-from apex._autocast_utils import _cast_if_autocast_enabled
-from apex.transformer.enums import AttnMaskType
+from deep_astro_uda.apex._autocast_utils import _cast_if_autocast_enabled
+from deep_astro_uda.apex.transformer.enums import AttnMaskType
 
 
 class ScaledUpperTriangMaskedSoftmax(torch.autograd.Function):

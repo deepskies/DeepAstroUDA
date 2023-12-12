@@ -26,10 +26,10 @@ from torch import _C
 from torch.cuda import _lazy_call, device as device_ctx_manager
 from torch.utils.checkpoint import detach_variable
 
-from apex.transformer.parallel_state import get_tensor_model_parallel_rank
-from apex.transformer.tensor_parallel.memory import allocate_mem_buff
-from apex.transformer.utils import split_tensor_into_1d_equal_chunks
-from apex.transformer.utils import gather_split_1d_tensor
+from deep_astro_uda.apex.transformer.parallel_state import get_tensor_model_parallel_rank
+from deep_astro_uda.apex.transformer.tensor_parallel.memory import allocate_mem_buff
+from deep_astro_uda.apex.transformer.utils import split_tensor_into_1d_equal_chunks
+from deep_astro_uda.apex.transformer.utils import gather_split_1d_tensor
 
 
 # Default name for the model parallel rng tracker.

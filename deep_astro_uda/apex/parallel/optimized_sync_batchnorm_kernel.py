@@ -2,7 +2,7 @@ import torch
 from torch.autograd.function import Function
 
 import syncbn
-from apex.parallel import ReduceOp
+#from apex.parallel import ReduceOp
 
 class SyncBatchnormFunction(Function):
 
