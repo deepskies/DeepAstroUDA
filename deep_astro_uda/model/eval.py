@@ -2,6 +2,7 @@ import torch
 import torch.nn.functional as F
 import numpy as np
 import logging
+import os
 
 def test(step, dataset_test, filename, n_share, unk_class, G, C1, threshold):
     G.eval()
