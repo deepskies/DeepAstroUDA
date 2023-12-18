@@ -6,12 +6,12 @@ def entropy(p):
     return -torch.mean(torch.sum(p * torch.log(p+1e-5), 1))
 
 # added by Alex
-def entropy_margin(p, value, margin=0.2, weight=None):
+def entropy_margin(p, value, margin, weight=None):
     p = F.softmax(p)
     return -torch.mean(hinge(torch.abs(-torch.sum(p * torch.log(p+1e-5), 1)-value), margin))
 
 # added by Alex
-def hinge(input, margin=0.2):
+def hinge(input, margin):
     return torch.clamp(input, min=margin)
 
 def get_losses_unlabeled(args, G, F1, im_data, im_data_bar, im_data_bar2, target, BCE, w_cons, device):
