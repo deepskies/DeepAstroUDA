@@ -1,6 +1,6 @@
-#Added by Alex
-#from https://github.com/zhengqili/unsupervised-learning-intrinsic-images/blob/master/data/unaligned_data_loader.py
-# "Learning Intrinsic Image Decomposition from Watching the World, Z. Li and N. Snavely, CVPR 2018".
+# Added by Alex
+# from https://github.com/zhengqili/unsupervised-learning-intrinsic-images/blob/master/data/unaligned_data_loader.py
+# ""Learning Intrinsic Image Decomposition from Watching the World, Z. Li and N. Snavely, CVPR 2018""
 
 import random
 import torch.utils.data
