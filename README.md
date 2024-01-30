@@ -96,7 +96,7 @@ Below are the list of commands, along with some possible approaches to using Dee
 ### Possible Experimental Setups <a name="setups"></a>
 
 To begin any example run of the DeepAstroUDA code, pip install the package using the following code:
-`pip install deepastrouda`. Any required data will be automatically downloaded by the package. Please see the provided template [`config.yaml`](./deep_astro_uda/configs/config.yaml) for a comprehensive look at what training, testing, and output parameters are available. 
+`pip install deep-astro-uda`. Any required data will be automatically downloaded by the package. Please see the provided template [`config.yaml`](./deep_astro_uda/configs/config.yaml) for a comprehensive look at what training, testing, and output parameters are available. 
 
 |Example Scenarios|
 |:---|
